@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Indonesian Fauna</string>
+    <string name="share">Share</string>
+    <string name="animal_name">Animal Name</string>
+    <string name="scientific_classification">Scientific Classification</string>
+    <string name="kingdom">Kingdom</string>
+    <string name="phylum">Phylum</string>
+    <string name="animal_class">Class</string>
+    <string name="order">Order</string>
+    <string name="family">Family</string>
+    <string name="species">Species</string>
+    <string name="genus">Genus</string>
+    <string name="overview">Overview</string>
+    <string name="msg_share">Hello, I use the Indonesian Fauna application. One of the animal names I share is\n%1$s</string>
+    <string name="share_with">Share with</string>
+    <string name="about">About</string>
+    <string name="creator_email">yogaadimaspambudi@gmail.com</string>
+    <string name="creator_name">Yoga Dimas</string>
+    <string name="title_detail">Detail</string>
+    <string name="title_about">About</string>
+    <string name="colon">:&#160;&#160;&#160;&#160;%1$s</string>
+    <string name="comodo_dragon_indonesian_fauna_logo">Komodo Indonesian Fauna Logo</string>
+</resources>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".view.DetailActivity">
+
+    <LinearLayout
+        style="@style/content.margin_horizontal"
+        android:orientation="vertical"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="16dp">
+
+        <TextView
+            android:id="@+id/tv_detail_name"
+            style="@style/content"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="@string/animal_name" />
+
+        <TextView
+            android:id="@+id/tv_detail_scientific_name"
+            style="@style/content"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            tools:text="Scientific name" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/rounded.corners"
+            tools:src="@drawable/komodo" />
+
+        <TextView
+            style="@style/content"
+            android:layout_marginTop="24dp"
+            android:text="@string/scientific_classification"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TableLayout
+            style="@style/content"
+            android:layout_marginTop="8dp">
+
+            <TableRow
+                style="@style/content"
+                android:layout_marginBottom="8dp">
+
+
+                <TextView
+                    style="@style/content_wrap.text_size.column_name"
+                    android:text="@string/kingdom" />
+
+
+                <TextView
+                    android:id="@+id/tv_detail_kingdom"
+                    style="@style/content_wrap.text_size.column_data"
+                    tools:text="@tools:sample/lorem" />
+
+
+            </TableRow>
+
+            <TableRow
+                style="@style/content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    style="@style/content_wrap.text_size.column_name"
+                    android:text="@string/phylum" />
+
+                <TextView
+                    android:id="@+id/tv_detail_phylum"
+                    style="@style/content_wrap.text_size.column_data"
+                    tools:text="@tools:sample/lorem" />
+
+            </TableRow>
+
+            <TableRow
+                style="@style/content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    style="@style/content_wrap.text_size.column_name"
+                    android:text="@string/animal_class" />
+
+                <TextView
+                    android:id="@+id/tv_detail_class"
+                    style="@style/content_wrap.text_size.column_data"
+                    tools:text="@tools:sample/lorem" />
+
+            </TableRow>
+
+            <TableRow
+                style="@style/content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    style="@style/content_wrap.text_size.column_name"
+                    android:text="@string/order" />
+
+                <TextView
+                    android:id="@+id/tv_detail_order"
+                    style="@style/content_wrap.text_size.column_data"
+                    tools:text="@tools:sample/lorem" />
+
+            </TableRow>
+
+            <TableRow
+                style="@style/content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    style="@style/content_wrap.text_size.column_name"
+                    android:text="@string/family" />
+
+                <TextView
+                    android:id="@+id/tv_detail_family"
+                    style="@style/content_wrap.text_size.column_data"
+                    tools:text="@tools:sample/lorem" />
+
+            </TableRow>
+
+            <TableRow
+                style="@style/content"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    style="@style/content_wrap.text_size.column_name"
+                    android:text="@string/genus" />
+
+                <TextView
+                    android:id="@+id/tv_detail_genus"
+                    style="@style/content_wrap.text_size.column_data"
+                    tools:text="@tools:sample/lorem" />
+
+            </TableRow>
+
+            <TableRow style="@style/content">
+
+                <TextView
+                    style="@style/content_wrap.text_size.column_name"
+                    android:text="@string/species" />
+
+                <TextView
+                    android:id="@+id/tv_detail_species"
+                    style="@style/content_wrap.text_size.column_data"
+                    tools:text="@tools:sample/lorem" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            style="@style/content"
+            android:layout_marginTop="16dp"
+            android:text="@string/overview"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_detail_overview"
+            style="@style/content.text_size"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="2dp"
+            tools:text="@tools:sample/lorem/random" />
+
+
+    </LinearLayout>
+
+</ScrollView>
