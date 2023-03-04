@@ -11,7 +11,7 @@
     <string name="species">Species</string>
     <string name="genus">Genus</string>
     <string name="overview">Overview</string>
-    <string name="msg_share">Hello, I use the Indonesian Fauna application. One of the animal names I share is\n%1$s</string>
+    <string name="msg_share">Hello, I use the Indonesian Fauna application. One of the animal names I share is\n%1$s.\nIt has a scientific name \n%2$s.\nIts order is \n%3$s.</string>
     <string name="share_with">Share with</string>
     <string name="about">About</string>
     <string name="creator_email">yogaadimaspambudi@gmail.com</string>

@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.yogadimas.indonesianfauna.R
 import com.yogadimas.indonesianfauna.adapter.AnimalAdapter
 import com.yogadimas.indonesianfauna.data.AnimalsData
-import com.yogadimas.indonesianfauna.intrface.OnItemClickCallback
 import com.yogadimas.indonesianfauna.model.AnimalModel
 
 class MainActivity : AppCompatActivity() {
@@ -48,16 +47,6 @@ class MainActivity : AppCompatActivity() {
         list = AnimalsData.listData
         val animalAdapter = AnimalAdapter(list)
         rvAnimals.adapter = animalAdapter
-        animalAdapter.setOnItemClickCallback(object : OnItemClickCallback {
-            override fun onBtnShareClick(animal: AnimalModel) {
-                val shareIntent = Intent(Intent.ACTION_VIEW)
-                shareIntent.action = Intent.ACTION_SEND
-                shareIntent.putExtra(Intent.EXTRA_TEXT,
-                    String.format(resources.getString(R.string.msg_share), animal.name.uppercase()))
-                shareIntent.type = "text/plain"
-                startActivity(Intent.createChooser(shareIntent, getString(R.string.share_with)))
-            }
-        })
     }
 
 

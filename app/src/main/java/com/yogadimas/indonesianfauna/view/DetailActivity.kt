@@ -12,7 +12,6 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
 import com.yogadimas.indonesianfauna.R
-import com.yogadimas.indonesianfauna.intrface.OnItemClickCallback
 import com.yogadimas.indonesianfauna.utility.Utility
 
 class DetailActivity : AppCompatActivity() {
@@ -76,7 +75,19 @@ class DetailActivity : AppCompatActivity() {
         tvOverview.text = intent.getStringExtra(ANIMAL_OVERVIEW)
 
 
-
+        val btnShare: Button = findViewById(R.id.action_share)
+        btnShare.setOnClickListener {
+            Log.d("TAG", "onCreate: setOnClickListener")
+            val shareIntent = Intent(Intent.ACTION_VIEW)
+            shareIntent.action = Intent.ACTION_SEND
+            shareIntent.putExtra(Intent.EXTRA_TEXT,
+                String.format(resources.getString(R.string.msg_share),
+                    nameValue?.uppercase(),
+                    sNameValue?.uppercase(),
+                    orderValue?.uppercase()))
+            shareIntent.type = "text/plain"
+            startActivity(Intent.createChooser(shareIntent, getString(R.string.share_with)))
+        }
 
             
     }

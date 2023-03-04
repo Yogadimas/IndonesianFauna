@@ -44,26 +44,12 @@
         <TextView
             android:id="@+id/item_overview"
             style="@style/content_full.margin_horizontal"
-            android:layout_above="@+id/action_share"
             android:layout_below="@+id/item_name"
             android:layout_toEndOf="@+id/item_image"
             android:ellipsize="end"
-            android:maxLines="4"
+            android:maxLines="6"
             tools:text="@tools:sample/lorem/random" />
 
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/action_share"
-            style="@style/margin_horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@+id/item_image"
-            android:text="@string/share"
-            android:textAlignment="center"
-            app:icon="@drawable/ic_outline_share"
-            app:iconGravity="textStart"
-            app:iconPadding="10dp" />
 
     </RelativeLayout>
 

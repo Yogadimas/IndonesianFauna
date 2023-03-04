@@ -6,7 +6,6 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.app.ActivityOptionsCompat
@@ -16,19 +15,12 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target.*
 import com.yogadimas.indonesianfauna.R
-import com.yogadimas.indonesianfauna.intrface.OnItemClickCallback
 import com.yogadimas.indonesianfauna.model.AnimalModel
 import com.yogadimas.indonesianfauna.view.DetailActivity
 
 class AnimalAdapter(private val listAnimals: ArrayList<AnimalModel>) :
 
     RecyclerView.Adapter<AnimalAdapter.CardViewViewHolder>() {
-
-    private lateinit var onItemClickCallback: OnItemClickCallback
-
-    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
-        this.onItemClickCallback = onItemClickCallback
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -66,9 +58,6 @@ class AnimalAdapter(private val listAnimals: ArrayList<AnimalModel>) :
                 ActivityOptionsCompat.makeSceneTransitionAnimation(context as Activity).toBundle())
         }
 
-
-        holder.btnShare.setOnClickListener { onItemClickCallback.onBtnShareClick(animal) }
-
     }
 
     override fun getItemCount(): Int = listAnimals.size
@@ -77,7 +66,6 @@ class AnimalAdapter(private val listAnimals: ArrayList<AnimalModel>) :
         val ivImage: ImageView = itemView.findViewById(R.id.item_image)
         val tvName: TextView = itemView.findViewById(R.id.item_name)
         val tvOverview: TextView = itemView.findViewById(R.id.item_overview)
-        val btnShare: Button = itemView.findViewById(R.id.action_share)
     }
 
 }
